@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!-- 适配移动端 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人网站</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* 导航栏 */
+        nav {
+            background: #2c3e50;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 999;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #3498db;
+        }
+
+        /* 首页横幅 */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("file:///C:/Users/yuwenkai/Desktop/%E5%9B%BE%E7%89%871.png");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 1rem;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 700px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #2980b9;
+        }
+
+        /* 通用区块样式 */
+        section {
+            padding: 5rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+        }
+
+        /* 功能卡片 */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .card h3 {
+            margin: 1rem 0;
+            color: #2c3e50;
+        }
+
+        /* 关于区域 */
+        .about {
+            background: #f1f5f9;
+            width: 100%;
+        }
+
+        /* 联系区域 */
+        .contact {
+            text-align: center;
+        }
+
+        /* 底部 */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- 导航栏 -->
+<nav>
+    <div class="nav-container">
+        <div class="logo">心速达</div>
+        <div class="nav-menu">
+            <a href="#home">首页</a>
+            <a href="#service">服务</a>
+            <a href="#about">关于</a>
+            <a href="#contact">联系</a>
+        </div>
+    </div>
+</nav>
+
+<!-- 首页横幅 -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>心速达</h1>
+        <p>一款革命性的社区医疗APP，致力于打造一个普惠、便捷、全面的医疗健康服务体系</p>
+        <a href="#service" class="btn">了解更多</a>
+    </div>
+</section>
+
+<!-- 服务/功能区 -->
+<section id="service">
+    <h2 class="section-title">我的服务</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>定位功能</h3>
+            <p>APP可以实时监测人体健康数据发送实时定位</p>
+        </div>
+        <div class="card">
+            <h3>紧急医疗响应系统</h3>
+            <p>APP可以提供相应的急救指导，使使用者获得专业的医疗救助。</p>
+        </div>
+        <div class="card">
+            <h3>关怀模式</h3>
+            <p>通过APP数据生成报告，直观了解近期的身体健康情况。</p>
+        </div>
+    </div>
+</section>
+
+<!-- 关于我 -->
+<section class="about" id="about">
+    <h2 class="section-title">关于我</h2>
+    <div style="text-align:center; max-width:800px; margin:0 auto; line-height:1.8;">
+        <p>我们的目标是成为一款智能健康监护平台、社区医疗服务桥梁、健康生活方式倡导 者以及紧急医疗响应系统。将致力于构建一个普惠、便捷、全面的社区医疗健康服务体系。</p>
+        <br>
+        <p>为了进一步完善和提升社区医疗服务体系，满足居民日益增长的健康需求。 我们将通过深化技术研发与功能优化；拓展用户基础与市场推广；深化社区合作与资源 整合；探索可持续发展；深化数据应用与智能医疗这五个阶段，逐步实现项目的发展目标。</p>
+    </div>
+</section>
+
+<!-- 联系 -->
+<section id="contact">
+    <h2 class="section-title">联系我</h2>
+    <div class="contact">
+        <p>邮箱：example@mail.com</p>
+        <p>电话：123 4567 8901</p>
+    </div>
+</section>
+
+<!-- 底部 -->
+<footer>
+    <p>&copy; 2026 我的个人网站 | 保留所有权利</p>
+</footer>
+
+</body>
+</html>
